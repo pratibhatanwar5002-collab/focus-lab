@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Focus Lab — Personal Break Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <main>
+    <header>
+      <div class="brand"><span>⚛</span> FOCUS LAB</div>
+      <div class="tag">ENTERTAINMENT, INTENTIONALLY.</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">PERSONAL DIGITAL OBSERVATORY</p>
+      <h1>Take a break.<br><em>Not a rabbit hole.</em></h1>
+      <p class="subtitle">Music, short videos and small moments of fun — without the endless scroll.</p>
+      <div class="quote" id="quote"></div>
+    </section>
+
+    <section class="actions">
+      <button class="card" onclick="showPanel('music')">
+        <span class="icon">🎧</span>
+        <span><strong>Music</strong><small>Your playlists, no algorithm.</small></span>
+        <b>→</b>
+      </button>
+      <button class="card" onclick="showPanel('videos')">
+        <span class="icon">🎬</span>
+        <span><strong>Short Break</strong><small>Only what you choose to watch.</small></span>
+        <b>→</b>
+      </button>
+    </section>
+
+    <section class="timer-box">
+      <div>
+        <p class="eyebrow">CONTROLLED BREAK</p>
+        <h2 id="timer">10:00</h2>
+      </div>
+      <div class="timer-controls">
+        <button onclick="setTimer(5)">5 min</button>
+        <button class="active" onclick="setTimer(10)">10 min</button>
+        <button onclick="setTimer(15)">15 min</button>
+        <button class="start" onclick="toggleTimer()" id="startBtn">Start break</button>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="panel">
+      <button class="close" onclick="closePanel()">×</button>
+      <div id="panelContent"></div>
+    </section>
+
+    <footer>
+      <span>✦ Curiosity is a form of discipline.</span>
+      <span>FOCUS LAB · v1</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

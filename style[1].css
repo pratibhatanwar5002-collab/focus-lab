@@ -1,0 +1,36 @@
+*{box-sizing:border-box}
+:root{--bg:#070b17;--panel:#0d1426;--text:#eef3ff;--muted:#94a3c2;--line:#22304b;--glow:#8ba7ff;--accent:#c8b8ff}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0%,#182447 0,#0b1121 38%,var(--bg) 75%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:90px 90px;opacity:.08}
+main{width:min(900px,92%);margin:auto;padding:28px 0 20px}
+header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}
+.brand{font-weight:800;letter-spacing:.14em;font-size:14px}.brand span{color:var(--accent);margin-right:8px}
+.tag,.eyebrow{font-size:10px;letter-spacing:.18em;color:var(--muted)}
+.hero{text-align:center;padding:70px 10px 38px}
+h1{font-size:clamp(42px,8vw,76px);line-height:.98;margin:12px 0 20px;letter-spacing:-.05em}
+h1 em{font-family:Georgia,serif;font-weight:400;color:var(--accent)}
+.subtitle{max-width:560px;margin:auto;color:var(--muted);line-height:1.7}
+.quote{margin:30px auto 0;max-width:600px;color:#d9e0f2;font-family:Georgia,serif;font-size:18px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card,.timer-controls button,.close{border:1px solid var(--line);background:rgba(13,20,38,.78);color:var(--text);border-radius:16px}
+.card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;text-align:left;gap:15px;padding:22px;cursor:pointer;transition:.2s}
+.card:hover{transform:translateY(-2px);border-color:#42537b}.icon{font-size:27px}.card strong{display:block;font-size:16px}.card small{display:block;color:var(--muted);margin-top:5px}
+.card b{color:var(--accent);font-size:22px}
+.timer-box{margin-top:14px;border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(120deg,rgba(16,25,48,.9),rgba(10,15,30,.8))}
+h2{font:600 48px Georgia,serif;margin:3px 0 0}
+.timer-controls{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.timer-controls button{padding:10px 13px;cursor:pointer;color:var(--muted)}.timer-controls .active{border-color:var(--accent);color:var(--text)}.timer-controls .start{background:#eef3ff;color:#08101f;border:0;font-weight:700}
+.panel{position:relative;margin-top:14px;padding:28px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.hidden{display:none}.close{position:absolute;right:15px;top:15px;font-size:22px;width:35px;height:35px;cursor:pointer}
+.panel h2{font-size:32px}.panel p{color:var(--muted)}.linkbox{display:block;margin-top:15px;padding:14px;border:1px dashed #344463;border-radius:12px;color:var(--muted)}
+footer{display:flex;justify-content:space-between;color:#64728f;font-size:11px;letter-spacing:.08em;padding:30px 3px 5px}
+@media(max-width:650px){main{padding-top:18px}.tag{display:none}.hero{padding:55px 5px 30px}.actions{grid-template-columns:1fr}.timer-box{display:block}.timer-controls{justify-content:flex-start;margin-top:18px}.timer-controls .start{width:100%}footer{display:block;line-height:2.2}}
+
+.playlist-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.playlist{display:flex;align-items:center;gap:12px;padding:15px;border:1px solid var(--line);border-radius:13px;background:rgba(18,29,55,.7);color:var(--text);text-decoration:none;transition:.2s}
+.playlist:hover{transform:translateY(-2px);border-color:#5269a0}
+.playlist span{display:block}.playlist strong{display:block}.playlist small{display:block;color:var(--muted);margin-top:4px}
+@media(max-width:650px){.playlist-grid{grid-template-columns:1fr}}
+
+.music-player{margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#050812;aspect-ratio:16/9}
+.music-player iframe{width:100%;height:100%;border:0;display:block}
+.music-note{font-size:12px;color:var(--muted);margin-top:10px}
+.playlist.active{border-color:var(--accent);box-shadow:0 0 0 1px rgba(200,184,255,.15)}
